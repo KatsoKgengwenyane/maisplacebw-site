@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mai's Place</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #8B5E3C;
+      --secondary: #F7CAC9;
+      --bg: #fffafa;
+      --text-dark: #4E342E;
+      --text-light: #ffffff;
+      --accent: #EECFCF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--text-light);
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .logo-img {
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background: var(--primary);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: var(--accent);
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: var(--text-light);
+      color: var(--primary);
+    }
+
+    section {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 0.5rem auto 0;
+      border-radius: 10px;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+      .card img {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 600px) {
+  .card img {
+    height: 180px;
+  }
+}
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: "•";
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+    }
+
+    blockquote {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--primary);
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--text-light);
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .logo-img {
+        max-width: 160px;
+      }
+      header h1 {
+        font-size: 1.3rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.2rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Mai's Place Logo" class="logo-img" />
+    <h1>Relax, Recharge, Repeat</h1>
+    <p>Your spa, beauty and wellness destination</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#location">Location</a>
+    <a href="#etiquette">Etiquette</a>
+    <a href="#policies">Policies</a>
+    <a href="#testimonial">Testimonial</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <div class="card">
+      <h3>Massage Treatments</h3>
+      <img src="img1.jpg" alt="Massage">
+      <ul>
+        <li>Swedish Massage | 30 mins – P380</li>
+        <li>Deep Tissue Massage | 60 mins – P450</li>
+        <li>Hot Stone Massage | 60 mins – P500</li>
+        <li>Aromatherapy Massage | 60 mins – P450</li>
+        <li>Back/Half Body Massage | 30 mins – P350</li>
+        <li>Neck & Shoulder Massage | 30 mins – P220</li>
+        <li>Head Massage | 30 mins – P80</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Skin Care Treatments</h3>
+      <img src="img2.jpg" alt="Facials">
+      <ul>
+        <li>Vitamin C Facial Mask | 60 mins – P400</li>
+        <li>Honeybush Facial Mask | 30 mins – P240</li>
+        <li>Deep Cleansing Facial | 60 mins – P350</li>
+        <li>Phyto Clay Mask | 60 mins – P400</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Hands & Feet</h3>
+      <img src="img3.jpg" alt="Manicure and Pedicure">
+      <ul>
+        <li>Classic Manicure – P100 | Gel Overlay – P200</li>
+        <li>Pedicure + Gel – P250 | Soak Off – P50</li>
+        <li>Basic Pedicure – P200 | Gel on Toes – P120</li>
+        <li>Tips – P250 | Paraffin Wax Treatment – P150</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Essentials</h3>
+      <img src="img5.jpg" alt="Waxing and Lashes">
+      <ul>
+        <li>Lash Installation – P150 | Removal – P60</li>
+        <li>Eyebrow – P60 | Lip – P20 | Chin – P30</li>
+        <li>Underarm – P100 | Hollywood – P250 | Brazilian – P190</li>
+        <li>Half Leg – P180 | Full Leg – P240 | Bikini Line – P150</li>
+        <li>Full Back – P350 | Chest – P200 | Arm – P120</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Glow Essentials</h2>
+    <div class="card">
+      <img src="img6.jpg" alt="Facial products">
+      <p>We are your glow plug! 💡 Facial products also available in-store:</p>
+      <ul>
+        <li>Cleansers</li>
+        <li>Moisturisers</li>
+        <li>Serums</li>
+        <li>Sunscreen</li>
+        <li>And more...</li>
+      </ul>
+      <p>Perfect for maintaining your post-treatment glow ✨</p>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>Our Store</h2>
+    <div class="card">
+      <p><strong>Location:</strong> Bush Camp, Orapa</p>
+      <p><strong>Hours:</strong> 10:00 AM – 9:00 PM (Weekdays only, closed on public holidays)</p>
+    </div>
+  </section>
+
+  <section id="etiquette">
+    <h2>Spa Etiquette</h2>
+    <div class="card">
+      <p>Please respect the tranquil environment and privacy of other guests by setting your phone to silent upon arrival.</p>
+      <p>Arrive at least 15 minutes early to check in and enjoy your treatment without rush. Late arrivals may result in reduced treatment time.</p>
+      <p>Bookings can be made via call or WhatsApp. House calls are also available for an extra fee.</p>
+    </div>
+  </section>
+
+  <section id="policies">
+    <h2>Booking Policies</h2>
+    <div class="card">
+      <ul>
+        <li>A non-refundable booking fee is required to reserve your slot.</li>
+        <li>20-minute grace period: After this, a P30 late fee applies.</li>
+        <li>After 30 minutes, your appointment may be canceled unless you notify us in advance.</li>
+        <li>Cancel at least 3 hours in advance—your booking fee will be forfeited if not.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="testimonial">
+    <h2>What Our Clients Say</h2>
+    <div class="card">
+      <blockquote>
+        "Mai’s Place is my escape — from the warm hands to the calming scents, it’s pure magic. Highly recommended!"
+      </blockquote>
+      <p style="text-align:right; font-style: italic;">— Naledi M.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <div class="card">
+      <p><strong>Phone / WhatsApp:</strong> +267 74 735 116</p>
+      <p><strong>Email:</strong> <a href="mailto:maisplacebw@gmail.com">maisplacebw@gmail.com</a></p>
+      <p><strong>Instagram:</strong> @mai_place_bw</p>
+    </div>
+  </section>
+  <section id="booking">
+  <h2>Book Your Appointment</h2>
+  <div class="card">
+    <form id="booking-form" action="https://formspree.io/f/xovnanoo" method="POST">
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Your full name" required style="width:100%;padding:0.5rem;margin:0.5rem 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required style="width:100%;padding:0.5rem;margin:0.5rem 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+      <label for="phone">Phone / WhatsApp:</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="+267 ..." required style="width:100%;padding:0.5rem;margin:0.5rem 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+      <label for="service">Select Service:</label><br>
+      <select id="service" name="service" required style="width:100%;padding:0.5rem;margin:0.5rem 0;border-radius:8px;border:1px solid #ccc;">
+        <option value="">-- Choose a service --</option>
+        <option value="Swedish Massage">Swedish Massage</option>
+        <option value="Deep Tissue Massage">Deep Tissue Massage</option>
+        <option value="Hot Stone Massage">Hot Stone Massage</option>
+        <option value="Aromatherapy Massage">Aromatherapy Massage</option>
+        <option value="Facial Treatments">Facial Treatments</option>
+        <option value="Manicure/Pedicure">Manicure/Pedicure</option>
+        <option value="Waxing/Lashes">Waxing/Lashes</option>
+      </select><br>
+
+      <label for="date">Preferred Date:</label><br>
+      <input type="date" id="date" name="date" required style="width:100%;padding:0.5rem;margin:0.5rem 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+      <label for="time">Preferred Time:</label><br>
+      <input type="time" id="time" name="time" required style="width:100%;padding:0.5rem;margin:0.5rem 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+      <label for="message">Additional Notes:</label><br>
+      <textarea id="message" name="message" rows="4" placeholder="Any special requests..." style="width:100%;padding:0.5rem;margin:0.5rem 0;border-radius:8px;border:1px solid #ccc;"></textarea><br>
+
+      <button type="submit" style="background: var(--primary); color: var(--text-light); border:none; padding:0.7rem 1.5rem; border-radius:20px; font-weight:bold; cursor:pointer; transition:0.3s;">Book Now</button>
+    </form>
+    <p id="success-message" style="display:none; color: green; margin-top: 1rem; font-weight: bold; text-align:center;">
+      Thank you! Your booking has been submitted successfully.
+    </p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('booking-form');
+  const successMessage = document.getElementById('success-message');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        successMessage.style.display = 'block';
+        form.reset();
+      } else {
+        response.json().then(data => {
+          alert("Oops! There was a problem submitting your form.");
+        });
+      }
+    }).catch(error => {
+      alert("Oops! There was a problem submitting your form.");
+    });
+  });
+</script>
+
+
+  <footer>
+    &copy; 2025 Mai's Place. All rights reserved.
+  </footer>
+
+</body>
+</html> 
